@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <link href="https://fonts.cdnfonts.com/css/coffee-butter" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+    <link href="https://fonts.cdnfonts.com/css/major-birch" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/montagu-slab" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/waiting-summer" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/fjalla-one" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/overpass-mono-2" rel="stylesheet">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+    <title>Personajes Dragon Ball</title>
+    <style>
+    :root {
+        --color-primario: #1a74fc;
+        --color-secundario: #FF4500;
+        --color-terceario: #e92ddf;
+        --color-cuarto: #FFD700;
+        --color-quinto: #F5F5F5;
+        --color-sexto: #000000;
+        --color-septimo: #FF69B4;
+    }   
+    * {
+        box-sizing: border-box;
+    }
+    body {
+        background-color: var(--color-primario);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+    }
+    header {
+        padding: 16px;
+        display: flex;
+        justify-content: flex-end;
+        background-color: var(--color-secundario);
+    }
+    header img {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .search {
+        background-color: var(--color-quinto);
+        border: 4px solid var(--color-cuarto);
+        border-radius: 50px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 15px;
+        padding: 10px 15px;
+        color: var(--color-secundario);
+    }
+    .search::placeholder {
+        color: var(--color-secundario);
+    }
+    .search:focus {
+        outline: none;
+        background-color: var(--color-cuarto);
+        color: var(--color-sexto)
+    }
+    main {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .personaje {
+        width: 300px;
+        margin: 15px;
+        background-color: var(--color-terceario);
+        box-shadow: 10px 15px 1px var(--color-cuarto);
+        position: relative;
+        overflow: hidden;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    .personaje img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+    .personaje-info {
+        color: var(--color-secundario);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 4px;
+        padding: 20px 15px;
+        letter-spacing: 5px;
+        background-color: var(--color-terceario);
+    }
+    .personaje-info h1 {
+        color: var(--color-quinto);
+        margin-top: 0;
+    }
+    .overview {
+        background-color: var(--color-secundario);
+        padding: 32px;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        max-height: 100%;
+        transform: translateY(101%);
+        overflow-y: auto;
+        transition: transform 0.5s ease-in-out;
+    }
+    .personaje:hover .overview {
+        transform: translateY(0);
+    }
+    .overview h3 {
+        color: var(--color-sexto);
+    }
+    .overview p {
+        color: var(--color-quinto);
+    }
+    .dropdown-menu {
+    background-color: #5b3a3a;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    padding: 10px 0;
+    z-index: 1000;
+    transition: all 0.3s ease;
+    }
+
+    .dropdown-item {
+        color: #eef0f2;
+        padding: 12px 20px;
+        text-decoration: none !important;
+        display: block;
+        border-radius: 4px;
+    }
+
+    .dropdown-item:hover {
+        background-color: rgba(238, 240, 242, 0.3);
+        color: #ffffff;
+        transform: scale(1.05);
+    }
+</style>
+
+</head>
+<body>
+    <div class="contener" style="font-family: 'Overpass Mono', sans-serif; font-weight: 600; background-color: #846a6a;">
+        <a class="navbar-brand" href="/PrimerParcial/ArturoJerez/index.html" style="color: #eef0f2; font-size: 24px;;">Inicio</a>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="nav navbar-nav" style="font-family: 'Overpass Mono', sans-serif; font-weight: 500; background-color: none; font-size: 18px;">
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: #eef0f2;">
+                        Unidad 1
+                    </a>
+                
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="/PrimerParcial/ArturoJerez/Arturo01.php">(1) Base de Datos</a><br>
+                        <a class="dropdown-item" href="/PrimerParcial/ArturoJerez/Arturo02.php">(2) Solicitar Datos</a><br>
+                        <a class="dropdown-item" href="/PrimerParcial/ArturoJerez/Arturo03.php">(3) Mostrar Datos</a><br>
+                    </div>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: #eef0f2;">
+                        Unidad 2
+                    </a>
+
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="/PrimerParcial/ArturoJerez/Arturo04.php">(4) Escuela</a><br>
+                        <a class="dropdown-item" href="/PrimerParcial/ArturoJerez/Arturo05.php">(5) Proyecto Primaveral</a><br>
+                        <a class="dropdown-item" href="/PrimerParcial/ArturoJerez/Arturo06.html">(6) DB Pokedex</a><br>
+                    </div>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: #eef0f2;">
+                        Unidad 3
+                    </a>
+
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="/PrimerParcial/ArturoJerez/Arturo07.html">(7) DB Peliculas</a><br>
+                        <a class="dropdown-item" href="/PrimerParcial/ArturoJerez/Arturo08.html">(8) DB Dragon Ball</a><br>
+                        <a class="dropdown-item" href="/PrimerParcial/ArturoJerez/Arturo03.html">(9) DB HP + RICK</a><br>
+                    </div>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: #eef0f2;">
+                        Otros 1
+                    </a>
+
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="/PrimerParcial/ArturoJerez/extra1.php">(3.1) Mostrar Datos</a><br>
+                        <a class="dropdown-item" href="/PrimerParcial/ArturoJerez/extra2.php">(4.1) Mi tienda</a><br>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <header>
+            <img src="harrypotter.png" alt="logo" style="width: auto; height: 50px;">
+            <img src="suma.png" alt="logo" style="width: auto; height: 50px;">
+            <img src="rick.png" alt="logo" style="width: auto; height: 50px;">
+        <form id="form">
+            <input type="text" id="search" class="search" placeholder="Busca tu personaje">
+        </form>
+    </header>
+    <main id="main"></main>
+
+    <script>
+        const API_URL_HP = 'https://hp-api.onrender.com/api/characters';
+        const API_URL_RM = 'https://rickandmortyapi.com/api/character';
+        const main = document.getElementById('main');
+        const form = document.getElementById('form');
+        const search = document.getElementById('search');
+        
+        getAllCharacters();
+        
+        async function getAllCharacters() {
+            const [rmRes, hpRes] = await Promise.all([
+                fetch(API_URL_RM).then(res => res.json()),
+                fetch(API_URL_HP).then(res => res.json())
+            ]);
+        
+            const rickChars = rmRes.results || [];
+            const hpChars = hpRes || [];
+            showCharacters([...rickChars, ...hpChars]);
+        }
+        
+        function showCharacters(characters) {
+        main.innerHTML = '';
+        characters.forEach((char) => {
+            let name = char.name || 'Desconocido';
+            let image = char.image || char.avatar || '';
+            let origin = char.origin ? char.origin.name : 'Desconocido';
+            let species = char.species || 'Desconocida';
+            let gender = char.gender || 'Desconocido'; 
+            let status = char.status || (char.alive === false ? 'Deceased' : 'Alive');
+
+            const charElements = document.createElement('div');
+            charElements.classList.add('personaje');
+            charElements.innerHTML = `
+                <img src="${image}" alt="${name}">
+                <div class="personaje-info">
+                    <h1>${name}</h1>
+                </div>
+                <div class="overview">
+                    <h3>Descripción</h3>
+                    <p><strong>Género:</strong> ${gender}</p>
+                    <p><strong>Especie:</strong> ${species}</p>
+                    <p><strong>Origen:</strong> ${origin}</p>
+                    <p><strong>Estado: </strong>${status}</p>
+                </div>
+                `;
+                main.appendChild(charElements);
+            });
+        }
+    
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const searchTerm = search.value.toLowerCase();
+            if (searchTerm && searchTerm !== '') {
+                getCharacters(`${API_URL}?name=${searchTerm}`);
+                search.value = '';
+            } else {
+                window.location.reload();
+            }
+        });
+    </script>
+    
+</body>
+</html>
