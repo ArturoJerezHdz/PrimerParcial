@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <link href="https://fonts.cdnfonts.com/css/coffee-butter" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+    <link href="https://fonts.cdnfonts.com/css/major-birch" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/montagu-slab" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/waiting-summer" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/fjalla-one" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/overpass-mono-2" rel="stylesheet">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+    <title>Gatomon</title>
+</head>
+    <style>
+        body {
+            background-image: url(pokedex.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        button {
+            width: 100px;
+            height: 100px;
+            background-color: rgb(255, 85, 0);
+            border-color: rgb(0, 0, 0);
+            border-radius: 50px;
+            position: absolute;
+            top: 400px;
+            left: 500px;
+        }
+        button:hover {
+            background-color: rgb(255, 255, 255);
+        }
+        .pokeImg{
+            position: absolute;
+            background-color: transparent;
+            z-index: 1;
+            width: 250px;
+            height: 250px;
+            left: 200px;
+            mix-blend-mode: multiply;
+        }
+        .placeholder {
+            width: 200px;
+            height: 50px;
+            position: absolute;
+            border-radius: 10px;
+            background-color: transparent;
+            text-align: center;
+            text-shadow: 2px;
+            font-size: 25px;
+            z-index: 2;
+            top: 300px;
+        }
+        .pokeimg1 {
+            position: absolute;
+            color: yellow;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 25px;
+            
+        }
+        .dropdown-menu {
+            background-color: #5b3a3a;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            padding: 10px 0;
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        .dropdown-item {
+            color: #eef0f2;
+            padding: 12px 20px;
+            text-decoration: none !important;
+            display: block;
+            border-radius: 4px;
+        }
+        
+        .dropdown-item:hover {
+            background-color: rgba(238, 240, 242, 0.3);
+            color: #ffffff;
+            transform: scale(1.05);
+        }
+    </style>
+<body>
+    <div class="contener" style="font-family: 'Overpass Mono', sans-serif; font-weight: 600; background-color: #846a6a;">
+        <a class="navbar-brand" href="/PrimerParcial/ArturoJerez/index.html" style="color: #eef0f2; font-size: 24px;;">Inicio</a>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="nav navbar-nav" style="font-family: 'Overpass Mono', sans-serif; font-weight: 500; background-color: none; font-size: 18px;">
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: #eef0f2;">
+                        Unidad 1
+                    </a>
+                
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="/PrimerParcial/ArturoJerez/Arturo01.php">(1) Base de Datos</a><br>
+                        <a class="dropdown-item" href="/PrimerParcial/ArturoJerez/Arturo02.php">(2) Solicitar Datos</a><br>
+                        <a class="dropdown-item" href="/PrimerParcial/ArturoJerez/Arturo03.php">(3) Mostrar Datos</a><br>
+                    </div>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: #eef0f2;">
+                        Unidad 2
+                    </a>
+
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="/PrimerParcial/ArturoJerez/Arturo04.php">(4) Escuela</a><br>
+                        <a class="dropdown-item" href="/PrimerParcial/ArturoJerez/Arturo05.php">(5) Proyecto Primaveral</a><br>
+                        <a class="dropdown-item" href="/PrimerParcial/ArturoJerez/Arturo06.html">(6) DB Pokedex</a><br>
+                    </div>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: #eef0f2;">
+                        Unidad 3
+                    </a>
+
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="/PrimerParcial/ArturoJerez/Arturo07.html">(7) DB Peliculas</a><br>
+                        <a class="dropdown-item" href="/PrimerParcial/ArturoJerez/Arturo08.html">(8) DB Dragon Ball</a><br>
+                        <a class="dropdown-item" href="/PrimerParcial/ArturoJerez/Arturo09.html">(9) DB HP + RICK</a><br>
+                    </div>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: #eef0f2;">
+                        Otros 1
+                    </a>
+
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="/PrimerParcial/ArturoJerez/extra01.php">(3.1) Mostrar Datos</a><br>
+                        <a class="dropdown-item" href="/PrimerParcial/ArturoJerez/extra02.php">(4.1) Mi tienda</a><br>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    
+    <input type="text" placeholder="Mon" id="PokeName" class="placeholder">
+    <img src="pokeball.jpg" alt="Pokeball" id="pokeImg" class="pokeImg">
+
+    <div id="pokename" class="pokeimg1" style="top: 100px; left: 500px;">Nombre del Pokemon</div>
+    <div id="pokeHe" class="pokeimg1" style="top: 180px; left: 500px;">Altura del Pokemon</div>
+    <div id="pokeWe" class="pokeimg1" style="top: 360px; left: 500px;">Peso del Pokemon</div>
+    <div id="poketype" class="pokeimg1" style="top: 540px; left: 500px;">Tipo del Pokemon</div>
+    <div id="pokeitem" class="pokeimg1" style="top: 860px; left: 500px;">Item del Pokemon</div>
+    <div id="pokemove1" class="pokeimg1" style="top: 320px; left: 500px;">Movimiento del Pokemon</div>
+    <div id="pokemove2" class="pokeimg1" style="top: 510px; left: 500px;">Movimiento del Pokemon</div>
+    <div id="pokemove3" class="pokeimg1" style="top: 450px; left: 500px;">Movimiento del Pokemon</div>
+    <div id="pokemove4" class="pokeimg1" style="top: 520px; left: 500px;">Movimiento del Pokemon</div>
+
+    <div id="pokeid" class="pokeimg1" style="top: 520px; left: 500px;"></div>
+    <div id="pokeorder" class="pokeimg1" style="top: 520px; left: 500px;"></div>
+
+    <button onclick="fetchPokemon()" class="button"></button>
+    <div class="grafica">
+        <canvas id="miCanvas"></canvas>
+    </div>
+    <script>
+        const fetchPokemon = () => {
+            const pokeNameInput = document.getElementById("PokeName");
+            let pokeName = pokeNameInput.value.toLowerCase();
+            const url = `https://pokeapi.co/api/v2/pokemon/${pokeName}`;
+    
+            fetch(url).then((res) => {
+                if (res.status != 200) {
+                    console.log(res);
+                } else {
+                    return res.json();
+                }
+            }).then((data) => {
+                if (data) {
+                    console.log(data);
+                    let pokeImg = data.sprites.front_default;
+                    pokeImage(pokeImg);
+                    
+                    let name = document.getElementById('pokename');
+                    name.innerHTML = `Name: ${data.forms[0].name}`;
+                    let element1 = document.getElementById('pokeHe');
+                    element1.innerHTML = `Height: ${data.height}`;
+                    let element2 = document.getElementById('pokeWe');
+                    element2.innerHTML = `Weight: ${data.weight}`;
+                    let element3 = document.getElementById('pokeorder');
+                    element3.innerHTML = `Order: ${data.order}`;
+                    let element4 = document.getElementById('pokeid');
+                    element4.innerHTML = `Id: #${data.id}`;
+                    let element5 = document.getElementById('pokeitem');
+                    element5.innerHTML = `Ability: ${data.abilities[0].ability.name}`;
+                    let element6 = document.getElementById('poketype');
+                    element6.innerHTML = `Type: ${data.types[0].type.name}`;
+                    let element7 = document.getElementById('pokemove1');
+                    element7.innerHTML = `Move 1: ${data.moves[0].move.name}`;
+                    let element8 = document.getElementById('pokemove2');
+                    element8.innerHTML = `Move 2: ${data.moves[1].move.name}`;
+                    let element9 = document.getElementById('pokemove3');
+                    element9.innerHTML = `Move 3: ${data.moves[2].move.name}`;
+                    let element10 = document.getElementById('pokemove4');
+                    element10.innerHTML = `Move 4: ${data.moves[3].move.name}`;
+    
+                    const miCanvas = document.getElementById("miCanvas").getContext("2d");
+                    if (window.miCanva != undefined) {
+                        window.miCanva.destroy();
+                    }
+                    window.miCanva = new Chart(miCanvas, {
+                        type: "bar",
+                        data: {
+                            labels: ["HP", "Attack", "Defense", "Special-A", "Special-D", "Speed"],
+                            datasets: [{
+                                label: `${data.forms[0].name}`,
+                                backgroundColor: 'rgba(154,62,35,1)',
+                                data: [
+                                    data.stats[0].base_stat,
+                                    data.stats[1].base_stat,
+                                    data.stats[2].base_stat,
+                                    data.stats[3].base_stat,
+                                    data.stats[4].base_stat,
+                                    data.stats[5].base_stat
+                                ],
+                                borderColor: [
+                                    'rgba(255, 99, 132, 1)',
+                                    'rgba(54, 162, 235, 1)',
+                                    'rgba(255, 206, 86, 1)',
+                                    'rgba(75, 192, 192, 1)',
+                                    'rgba(153, 102, 255, 1)',
+                                    'rgba(255, 159, 64, 1)'
+                                ],
+                                backgroundColor: [
+                                    'rgba(255, 99, 132, 0.5)',
+                                    'rgba(54, 162, 235, 0.5)',
+                                    'rgba(255, 206, 86, 0.5)',
+                                    'rgba(75, 192, 192, 0.5)',
+                                    'rgba(153, 102, 255, 0.5)',
+                                    'rgba(255, 159, 64, 0.5)'
+                                ],
+                                borderWidth: 1,
+                            }]
+                        },
+                        options: {
+                            scales: {
+                                x: {
+                                    ticks: {
+                                        maxRotation: 90,
+                                        minRotation: 90,
+                                        color: 'purple',
+                                        font: { size: 15 }
+                                    }
+                                }
+                            }
+                        }
+                    });
+                }
+            });
+        }
+    
+        const pokeImage = (url) => {
+            const pokePhoto = document.getElementById("pokeImg");
+            pokePhoto.src = url;
+        }
+    </script>

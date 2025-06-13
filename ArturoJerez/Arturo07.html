@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <link href="https://fonts.cdnfonts.com/css/coffee-butter" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+    <link href="https://fonts.cdnfonts.com/css/major-birch" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/montagu-slab" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/waiting-summer" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/fjalla-one" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/overpass-mono-2" rel="stylesheet">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+    <title>Peliculas El Miau</title>
+</head>
+<body>
+    <div class="contener" style="font-family: 'Overpass Mono', sans-serif; font-weight: 600; background-color: #846a6a;">
+        <a class="navbar-brand" href="/PrimerParcial/ArturoJerez/index.html" style="color: #eef0f2; font-size: 24px;;">Inicio</a>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="nav navbar-nav" style="font-family: 'Overpass Mono', sans-serif; font-weight: 500; background-color: none; font-size: 18px;">
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: #eef0f2;">
+                        Unidad 1
+                    </a>
+                
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="/PrimerParcial/ArturoJerez/Arturo01.php">(1) Base de Datos</a><br>
+                        <a class="dropdown-item" href="/PrimerParcial/ArturoJerez/Arturo02.php">(2) Solicitar Datos</a><br>
+                        <a class="dropdown-item" href="/PrimerParcial/ArturoJerez/Arturo03.php">(3) Mostrar Datos</a><br>
+                    </div>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: #eef0f2;">
+                        Unidad 2
+                    </a>
+
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="/PrimerParcial/ArturoJerez/Arturo04.php">(4) Escuela</a><br>
+                        <a class="dropdown-item" href="/PrimerParcial/ArturoJerez/Arturo05.php">(5) Proyecto Primaveral</a><br>
+                        <a class="dropdown-item" href="/PrimerParcial/ArturoJerez/Arturo06.html">(6) DB Pokedex</a><br>
+                    </div>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: #eef0f2;">
+                        Unidad 3
+                    </a>
+
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="/PrimerParcial/ArturoJerez/Arturo07.html">(7) DB Peliculas</a><br>
+                        <a class="dropdown-item" href="/PrimerParcial/ArturoJerez/Arturo08.html">(8) DB Dragon Ball</a><br>
+                        <a class="dropdown-item" href="/PrimerParcial/ArturoJerez/Arturo09.html">(9) DB HP + RICK</a><br>
+                    </div>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: #eef0f2;">
+                        Otros 1
+                    </a>
+
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="/PrimerParcial/ArturoJerez/extra01.php">(3.1) Mostrar Datos</a><br>
+                        <a class="dropdown-item" href="/PrimerParcial/ArturoJerez/extra02.php">(4.1) Mi tienda</a><br>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        :root {
+            --primary-color: #B3E8F6;
+            --secondary-color: #0B5778;
+            --terceary-color: #60B4D8;
+        }
+        body {
+            background-color: var(--primary-color);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+        }
+        header {
+            padding: 16px;
+            display: flex;
+            justify-content: flex-end;
+            background-color: var(--secondary-color);
+        }
+        .search {
+            background-color: transparent;
+            border: 5px solid var(--terceary-color);
+            border-radius: 50px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 15px;
+            padding: 10px 15px;
+            color: var(--primary-color);
+        }
+        search::placeholder {
+            color: var(--terceary-color);
+        }
+        .search:focus {
+            outline: none;
+            background-color: var(--primary-color);
+        }
+        main {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .movie {
+            width: 300px;
+            margin: 15px;
+            background-color: var(--secondary-color);
+            box-shadow:  0 5px 5px black;
+            position: relative;
+            overflow: hidden;
+            border-radius: 20px;
+        }
+        .movie img {
+            width: 100%;
+        }
+        .movie-info {
+            color: var(--terceary-color);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 4px;
+            padding: 8px 15px 15px;
+            letter-spacing: 8px;
+        }
+        .movie-info h3 {
+            margin-top: 0;
+        }
+        .movie-info span {
+            background-color: var(--primary-color);
+            padding: 5px 8px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        .movie-info span.green {
+            color: green;
+        }
+        .movie-info span.yellow {
+            color: rgb(176, 176, 2);
+        }
+        .movie-info span.red {
+            color: red;
+        }
+        .overview {
+        background-color: #fff;
+        padding: 32px;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        max-height: 100%;
+        transform: translateY(101%);
+        overflow-y: auto;
+        transition: transform 0.3s ease-in;
+        }
+        .movie:hover .overview {
+            transform: translateY(0);
+        }
+        .dropdown-menu {
+            background-color: #5b3a3a;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            padding: 10px 0;
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+    .dropdown-item {
+        color: #eef0f2;
+        padding: 12px 20px;
+        text-decoration: none !important;
+        display: block;
+        border-radius: 4px;
+    }
+
+    .dropdown-item:hover {
+        background-color: rgba(238, 240, 242, 0.3);
+        color: #ffffff;
+        transform: scale(1.05);
+    }
+    </style>
+    <header>
+        <img src="logo1.jpg" alt="logo" style="width: auto; height: 50px;">
+        <form id="form">
+            <input type="text" id="search" class="search" placeholder="Busca tu pelicula">
+        </form>
+    </header>
+    <main id="main"></main>
+
+    <script>
+        const API_URL = 'https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=3fd2be6f0c70a2a598f084ddfb75487c&page=1';
+        const IMG_PATH = 'https://image.tmdb.org/t/p/w1280';
+        const SEARCH_API = 'https://api.themoviedb.org/3/search/movie?api_key=3fd2be6f0c70a2a598f084ddfb75487c&query="';
+        
+        const main = document.getElementById('main');
+        const form = document.getElementById('form');
+        const search = document.getElementById('search');
+
+        getMovies(API_URL)
+
+        async function getMovies(url){
+            const res = await fetch(url);
+            const data = await res.json();
+            showMovies(data.results);
+        }
+        function showMovies(movies){
+            main.innerHTML = '';
+
+            movies.forEach((movie) => {
+                const {title, poster_path, vote_average, overview} = movie; 
+                const movieElements = document.createElement('div');
+                movieElements.classList.add('movie');
+                movieElements.innerHTML=`
+                <img src = "${IMG_PATH + poster_path}" alt="${title}">
+                <div class="movie-info">
+                    <h3>${title}</h3>
+                    <span class = "${getClassByRate(vote_average)}">
+                        ${vote_average}</span>
+                </div>
+                <div class="overview">
+                <h3>Overview</h3> 
+                      ${overview}
+                </div>
+
+                `;
+                
+            main.appendChild(movieElements);
+            });
+        }
+        function getClassByRate(vote){
+        if(vote >= 8){
+            return 'green';
+        }
+        else if (vote >= 5){
+            return 'yellow';
+        }
+        else {
+            return 'red';
+        }
+        }
+        form.addEventListener('submit', (e) => {
+            e.preventDefault()
+            const searchTerm = search.value;
+            if(searchTerm && searchTerm !== ''){
+                getMovies(SEARCH_API + searchTerm)
+                search.value='';
+            }
+            else{window.location.reload();}
+        })
+    </script>
+
+</body>
+</html>
